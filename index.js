@@ -56,7 +56,9 @@ function handleAttrs(attrsString) {
 
 const result = ast(template)
 console.log(result)
-
+const str = JSON.stringify(result, null, '\t')
+console.log(str)
+document.write(`<pre>${str}</pre>`)
 
 function ast(template) {
     const tagStack = []
